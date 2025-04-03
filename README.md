@@ -1,7 +1,7 @@
 # EBML
 EBML is a repository for a paper (not yet published). It includes a dataset of synthetic light curves of eclipsing binaries. You can find the dataset at the following link:
 
-[Dataset of Synthetic Light Curves](#https://u.pcloud.link/publink/show?code=kZMm285Zoy7Q3IAQOakIshhv4jTeH8OAtS4y#folder=25535342132&tpl=publicfolderlist)
+[Dataset of Synthetic Light Curves](https://u.pcloud.link/publink/show?code=kZMm285Zoy7Q3IAQOakIshhv4jTeH8OAtS4y#folder=25535342132&tpl=publicfolderlist)
 
 ## Folder Structure and Content
 
