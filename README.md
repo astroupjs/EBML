@@ -23,4 +23,17 @@ This folder includes synthetic light curves generated for eclipsing binary syste
 #### Subfolder: `OGLE_LC_binned`
 This folder contains light curves for eclipsing binary systems from the OGLE catalog. These light curves are binned to 100 points equally distributed over the orbital period.
 
+### Data Files
+
+The `data` folder contains several CSV files with classification results for eclipsing binary systems:
+
+- **classification_OGLE.csv**  
+  Contains classification results for OGLE eclipsing binaries. Columns include the object name, Gaia ID, original OGLE classification, and results from various machine learning models (ResNet and ViT) for both binary and spotted classifications in different passbands (OGLE I and Gaia G).
+
+- **classification_DEBcat.csv**  
+  Contains classification results for systems from the DEBcat catalog. Columns include the system name, Gaia ID, classification results from different models and passbands (TESS and Gaia), as well as literature information about the presence of spots and bibliographic references.
+
+- **classification_WUMaCat.csv**  
+  Contains classification results for systems from the W UMa catalog. Columns include the system name, Gaia ID, classification results from different models and passbands (TESS and Gaia), and information about the presence of real spots.
+
 
