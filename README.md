@@ -1,5 +1,5 @@
 # EBML
-EBML is a repository for the paper (under review). It includes the trained models and a dataset of synthetic light curves of eclipsing binaries. You can find the dataset at the following link:
+EBML is a repository for the paper (under review). It includes the trained models and a dataset of synthetic light curves of eclipsing binaries. You can find the storage at the following link:
 
 [Trained Models and Dataset of Synthetic Light Curves](https://u.pcloud.link/publink/show?code=kZMm285Zoy7Q3IAQOakIshhv4jTeH8OAtS4y#folder=25535342132&tpl=publicfolderlist)
 
