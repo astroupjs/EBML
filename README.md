@@ -59,7 +59,7 @@ The `data` folder contains several CSV files with classification results for ecl
 
 The `sripts` folder contains Python scripts used for generating images, training, and applying machine learning models to classify eclipsing binary light curves:
 
-- **make_syntetic_images_overcontact_hexbin.py**  
+- **make_polar_hexbin_images.py**  
   Generates synthetic polar hexbin images from light curve data for overcontact binary systems. It adds noise and outliers to the data, creates images in polar coordinates, and saves them for use in machine learning.
 
 - **model_pytorch_RasNet.py**  
@@ -73,5 +73,13 @@ The `sripts` folder contains Python scripts used for generating images, training
 
 - **classify_pytorch_Vit.py**  
   Loads a trained Vision Transformer (ViT) model and applies it to classify a single light curve image. Outputs the predicted class and probabilities.
+
+## Notebooks
+
+- `notebooks/tutorial.ipynb`: Step-by-step tutorial for preparing, transforming, and training models on synthetic Gaia light curve data. Includes data download, sampling, image generation, and model training (ResNet, ViT).
+- `notebooks/tutorial_to_predict_real_data.ipynb`: Guide for predicting the class and spot existence of real Gaia light curves using pretrained models. Covers ECSV reading, transformation to polar hexbin images, and batch prediction with result analysis.
+- `notebooks/tutorial_to_train_models.ipynb`: Advanced notebook for training and evaluating models on custom or extended datasets, with modular code for experimentation.
+
+These notebooks provide a complete workflow from data preparation to model inference and evaluation for both synthetic and real Gaia light curve data.
 
 
