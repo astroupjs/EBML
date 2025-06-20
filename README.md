@@ -82,4 +82,45 @@ The `sripts` folder contains Python scripts used for generating images, training
 
 These notebooks provide a complete workflow from data preparation to model inference and evaluation for both synthetic and real Gaia light curve data.
 
+## Getting Started
+
+### Prerequisites
+- Python 3.9 or 3.10 (recommended)
+- pip (Python package manager)
+- git (for cloning the repository)
+
+### Installation Steps
+1. **Clone the repository:**
+   ```sh
+   git clone <your-repo-url>
+   cd EBML
+   ```
+2. **(Optional but recommended) Create a virtual environment:**
+   ```sh
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. **Install required packages:**
+   ```sh
+   pip install -r requirements.txt
+   ```
+   - If you encounter issues with numpy version compatibility, use:
+     ```sh
+     pip install "numpy<2"
+     ```
+4. **(Optional) Install Jupyter for running notebooks:**
+   ```sh
+   pip install notebook
+   ```
+5. **Download the required data and pretrained models:**
+   - Follow the instructions in the notebooks to download synthetic and real Gaia light curve data, as well as pretrained model files.
+
+### Running the Notebooks
+- Open your desired notebook in VS Code or Jupyter:
+  ```sh
+  jupyter notebook
+  # or use VS Code's built-in notebook support
+  ```
+- Follow the step-by-step instructions in each notebook for data preparation, model training, and prediction.
+
 
