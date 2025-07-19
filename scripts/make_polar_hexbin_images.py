@@ -55,15 +55,15 @@ def create_images_from_dataframe(df, out_dir, n_start=0, image_size=224, passban
     n = n_start
     # Set parameters based on passband
     if passband == 'gaia':
-        noise_std = 0.005
+        noise_std = 0.001
         outlier_std = 0.3
-        remove_min, remove_max = 0, 80
+        remove_min, remove_max = 40, 80
     elif passband == 'tess':
-        noise_std = 0.002
+        noise_std = 0.001
         outlier_std = 0.15
         remove_min, remove_max = 0, 1
     elif passband == 'ogle':
-        noise_std = 0.01
+        noise_std = 0.005
         outlier_std = 0.5
         remove_min, remove_max = 0, 1
     else:

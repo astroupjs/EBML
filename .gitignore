@@ -67,8 +67,7 @@ env.bak/
 venv.bak/
 
 # Project-specific ignores
-models/
-models/*
+models/*.pth
 data/
 data/*/
 notebooks/*.pth
