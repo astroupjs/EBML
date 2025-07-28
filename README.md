@@ -1,27 +1,57 @@
 # EBML
 
-EBML is a repository for the paper (under review). It includes the trained models and a dataset of synthetic light curves of eclipsing binaries. You can find the storage at the following link:
+EBML is a repository for the paper (under review). It includes trained models and a dataset of synthetic light curves of eclipsing binaries.
 
-[Trained Models and Dataset of Synthetic Light Curves](https://u.pcloud.link/publink/show?code=kZMm285Zoy7Q3IAQOakIshhv4jTeH8OAtS4y#folder=25535342132&tpl=publicfolderlist)
+## 1. Getting Started
 
----
+### Requirements
+- Python version: 3.9 to 3.12 (due to PyTorch compatibility)
+- Required packages: See `requirements.txt`
 
-## 1. Storage Folder Structure and Content
+### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/astroupjs/EBML.git
+cd EBML
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows, use: .venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## 2. Repository Structure
+```
+EBML/
+├── data/                    # Data files and datasets
+├── models/                  # Trained model files (.pth)
+├── notebooks/              # Jupyter notebooks for analysis
+├── scripts/               # Python scripts and utilities
+└── requirements.txt       # Package dependencies
+```
+
+## 3. Storage Folder Structure
 
 ### Main Folder: `EBML`
-The `EBML` storage folder contains the following subfolders:
+The storage contains the following subfolders:
 
 #### Subfolder: `Models`
-Contains trained machine learning models for eclipsing binary classification and spot detection. Structure:
-- `Models/Gaia/`: Trained ResNet and ViT models for Gaia G passband.
-- `Models/OGLE/`: Trained ResNet and ViT models for OGLE I passband.
-- `Models/TESS/`: Trained ResNet and ViT models for TESS passband.
+Contains trained machine learning models for eclipsing binary classification and spot detection:
+- `Models/Gaia/`: Trained ResNet and ViT models for Gaia G passband
+- `Models/OGLE/`: Trained ResNet and ViT models for OGLE I passband
+- `Models/TESS/`: Trained ResNet and ViT models for TESS passband
 
 **Naming Convention for Model Files:**
 `2class_"model_type"_"model_architecture"_"passband"_hexbin.pth`
-- **model_type**: Type of classification (e.g., binary, spotted, etc.)
-- **model_architecture**: Architecture used (e.g., ResNet, ViT)
-- **passband**: Photometric passband (e.g., Gaia, OGLE, TESS)
+- **model_type**: Type of classification (binary, spotted, etc.)
+- **model_architecture**: Architecture used (ResNet, ViT)
+- **passband**: Photometric passband (Gaia, OGLE, TESS)
 
 Example files:
 - `2class_binary_ResNet_Gaia_hexbin.pth`
@@ -71,52 +101,11 @@ Complete workflow from data preparation to model inference and evaluation:
 - `metrics_for_classification.ipynb`: Classification metrics for binary models.
 - `metrics_for_spot_detection.ipynb`: Metrics for spot detection models.
 - `models_learning_progress.ipynb`: Visualize/track model learning progress.
-- `models_learning_study.ipynb`: Visualizations and metrics for model training progress.
 - `tutorial_to_predict_real_data.ipynb`: Predict class/spot existence for real Gaia light curves.
 - `tutorial_to_train_models.ipynb`: Train/evaluate models on custom/extended datasets.
-- `tutorial.ipynb`: Step-by-step tutorial for synthetic Gaia light curve data.
 
----
+## 4. Using the Notebooks
 
-## 3. Getting Started
-
-### Prerequisites
-- Python 3.9 or 3.10 (recommended)
-- pip (Python package manager)
-- git (for cloning the repository)
-
-### Installation Steps
-1. **Clone the repository:**
-   ```sh
-   git clone <your-repo-url>
-   cd EBML
-   ```
-2. **(Optional but recommended) Create a virtual environment:**
-   ```sh
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. **Install required packages:**
-   ```sh
-   pip install -r requirements.txt
-   ```
-   - If you encounter issues with numpy version compatibility, use:
-     ```sh
-     pip install "numpy<2"
-     ```
-4. **(Optional) Install Jupyter for running notebooks:**
-   ```sh
-   pip install notebook
-   ```
-5. **Download the required data and pretrained models:**
-   - Follow the instructions in the notebooks to download synthetic and real Gaia light curve data, as well as pretrained model files.
-
-### Running the Notebooks
-- Open your desired notebook in VS Code or Jupyter:
-  ```sh
-  jupyter notebook
-  # or use VS Code's built-in notebook support
-  ```
-- Follow the step-by-step instructions in each notebook for data preparation, model training, and prediction.
+You can start using the provided Jupyter notebooks immediately. Open any notebook in the `notebooks` folder and follow the step-by-step instructions inside to run analyses, train models, or make predictions. Each notebook includes detailed guidance for its workflow.
 
 
