@@ -15,7 +15,7 @@ git clone https://github.com/astroupjs/EBML.git
 cd EBML
 ```
 
-2. Create and activate a virtual environment:
+2. Create and activate a virtual environment (recommended for most users):
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows, use: .venv\Scripts\activate
@@ -25,6 +25,27 @@ source .venv/bin/activate  # On Windows, use: .venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
+
+---
+
+**Conda users:**
+
+If you prefer to use conda, follow these steps:
+
+1. Create and activate a conda environment with a compatible Python version (3.9–3.12):
+   ```bash
+   conda create -n ebml_env python=3.12
+   conda activate ebml_env
+   ```
+2. Install dependencies using pip inside the conda environment:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. (Optional) For GPU support, install PyTorch via conda:
+   ```bash
+   conda install pytorch torchvision torchaudio cpuonly -c pytorch
+   ```
+   *(Replace `cpuonly` with the appropriate CUDA version if you have a compatible GPU)*
 
 ## 2. Repository Structure
 ```
