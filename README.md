@@ -36,7 +36,29 @@ EBML/
 └── requirements.txt       # Package dependencies
 ```
 
+### Data Files
+The `data` folder contains CSV files with classification results for eclipsing binary systems. Subfolders for training and validation datasets are created by the notebooks.
+- **classification_OGLE.csv**: OGLE binaries, with model results for OGLE I and Gaia G.
+- **classification_DEBcat.csv**: DEBcat systems, with model results for TESS and Gaia, spot detection, and literature info.
+- **classification_WUMaCat.csv**: W UMa catalog systems, with model results for TESS and Gaia, and spot info.
+
+### Models Directory
+The `models` directory contains all trained model files for classification and spot detection. Download from storage. Includes a `progress` subfolder for training logs and metadata (JSON files tracking loss, accuracy, etc.).
+
+### Scripts
+The `scripts` folder contains Python scripts for generating images, training, and applying ML models:
+- **binary_metrics.py**: Binary classification metrics, ROC, reliability diagrams.
+- **classify_pytorch_resnet.py**: Load/apply ResNet model to classify a light curve image.
+- **classify_pytorch_vit.py**: Load/apply ViT model to classify a light curve image.
+- **clean_ogle_csv.py**: Clean OGLE CSV files (remove spaces from columns/values).
+- **make_polar_hexbin_images.py**: Generate synthetic polar hexbin images from light curves.
+- **model_pytorch_rasnet.py**: Train ResNet model for binary classification.
+- **model_pytorch_vit.py**: Train ViT model for binary classification.
+- **spot_metrics.py**: Metrics for spot detection (probability histograms, calibration curves).
+
 ## 3. Storage Folder Structure
+
+[Trained Models and Dataset of Synthetic Light Curves](https://u.pcloud.link/publink/show?code=kZMm285Zoy7Q3IAQOakIshhv4jTeH8OAtS4y#folder=25535342132&tpl=publicfolderlist)
 
 ### Main Folder: `EBML`
 The storage contains the following subfolders:
@@ -73,28 +95,6 @@ Light curves as CSV tables, standard phase-folded images, and polar+hexbin image
 **CSV Table columns:** TimeG, FG, e_FG, Phase, norm_FG, e_norm_FG
 
 ---
-
-## 2. Repository Structure
-
-### Data Files
-The `data` folder contains CSV files with classification results for eclipsing binary systems. Subfolders for training and validation datasets are created by the notebooks.
-- **classification_OGLE.csv**: OGLE binaries, with model results for OGLE I and Gaia G.
-- **classification_DEBcat.csv**: DEBcat systems, with model results for TESS and Gaia, spot detection, and literature info.
-- **classification_WUMaCat.csv**: W UMa catalog systems, with model results for TESS and Gaia, and spot info.
-
-### Models Directory
-The `models` directory contains all trained model files for classification and spot detection. Download from storage. Includes a `progress` subfolder for training logs and metadata (JSON files tracking loss, accuracy, etc.).
-
-### Scripts
-The `scripts` folder contains Python scripts for generating images, training, and applying ML models:
-- **binary_metrics.py**: Binary classification metrics, ROC, reliability diagrams.
-- **classify_pytorch_resnet.py**: Load/apply ResNet model to classify a light curve image.
-- **classify_pytorch_vit.py**: Load/apply ViT model to classify a light curve image.
-- **clean_ogle_csv.py**: Clean OGLE CSV files (remove spaces from columns/values).
-- **make_polar_hexbin_images.py**: Generate synthetic polar hexbin images from light curves.
-- **model_pytorch_rasnet.py**: Train ResNet model for binary classification.
-- **model_pytorch_vit.py**: Train ViT model for binary classification.
-- **spot_metrics.py**: Metrics for spot detection (probability histograms, calibration curves).
 
 ### Notebooks
 Complete workflow from data preparation to model inference and evaluation:
