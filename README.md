@@ -1,6 +1,6 @@
 # EBML
 
-EBML is a repository for the paper (under review). It includes trained models and a dataset of synthetic light curves of eclipsing binaries.
+EBML is a repository for the [paper](https://ui.adsabs.harvard.edu/abs/2025A%26C....5300998P/abstract). It includes trained models and a dataset of synthetic light curves of eclipsing binaries.
 
 ## 1. Getting Started
 
